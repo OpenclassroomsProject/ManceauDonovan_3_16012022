@@ -1,0 +1,168 @@
+@import "../Components/hearth-click";
+main {
+    .restaurant_picture {
+        display: flex;
+        height: 69.6vw;
+        width: 100vw;
+        background: red;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .menu {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -50px;
+        background: $grey;
+        height: 1161px;
+        border-radius: 40px 40px 0 0;
+        padding: 35px 14px;
+        .entries,
+        .main_course,
+        .dessert {
+            width: 100%;
+            @mixin animation_show($delay: false, $duration: 1s) {
+                @if ($delay) {
+                    animation: show $duration;
+                    animation-delay: $delay;
+                } @else {
+                    animation: show $duration;
+                }
+                animation-fill-mode: forwards;
+
+                // @if (opacity = 1) {
+                //     background: red;
+                // }
+            }
+            // // animation: show 3s linear;
+            .card:nth-child(2) {
+                @include animation_show;
+            }
+            .card:nth-child(3) {
+                @include animation_show(0.3s);
+            }
+            .card:nth-child(4) {
+                @include animation_show(0.6s);
+            }
+
+            @keyframes show {
+                0% {
+                    // visibility: visible;
+                    opacity: 0.1;
+                    // transition: margin 1s;
+                    transition: transform 1s;
+                }
+                100% {
+                    opacity: 1;
+                    // margin-top: 0;
+                    transform: translateY(0);
+                    // animation-timing-function: step-end;
+                }
+            }
+        }
+        h1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: fit-content;
+            margin-bottom: 10px;
+            font-family: "Shrikhand", cursive;
+            font-size: 7vw;
+            .fa-heart {
+                @extend .hearth-click;
+            }
+        }
+        h2 {
+            width: 40px;
+            font-size: 17px;
+            border-bottom: solid 3px $tertiary_color;
+            padding-bottom: 9px;
+            margin-bottom: 14px;
+            margin-top: 30px;
+            font-weight: 300;
+        }
+        .card {
+            // visibility: hidden;
+            opacity: 0;
+            // width: calc(100% - 28px);
+            background: white;
+            // height: calc(68px - 30px);
+            height: 68px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(40px);
+            // transition: margin 700ms;
+            border-radius: 15px;
+            margin-bottom: 16px;
+            @extend .shadow_box;
+            &:hover {
+                div.check {
+                    visibility: visible;
+                    width: 65px;
+                }
+                path {
+                    transform: rotate(720deg);
+                }
+            }
+
+            .name {
+                width: 230px;
+                white-space: nowrap;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                margin-left: 10px;
+                h3 {
+                    font-weight: 500;
+                }
+                p {
+                    font-weight: 300;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+            }
+            .price {
+                display: flex;
+                span {
+                    display: flex;
+                    align-items: flex-end;
+                    // margin-bottom: -3px;
+                }
+                .check {
+                    background-color: $tertiary_color;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    visibility: hidden;
+                    height: 100%;
+                    width: 0;
+                    right: 0;
+                    transition: width 1s ease-in-out;
+                    svg {
+                        width: 50%;
+                        height: 50%;
+                        fill: white;
+                        path {
+                            transform: rotate(0deg);
+                            transition: transform 2s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+        a {
+            margin-top: 46px;
+            font-size: 4vw;
+            font-weight: 500;
+            @extend .btn-degrade;
+        }
+    }
+}

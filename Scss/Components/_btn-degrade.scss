@@ -1,0 +1,12 @@
+.btn-degrade {
+    background: linear-gradient($pink, $purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7vw;
+    width: 58.133333333333333vw;
+    height: 13.333333333333333vw;
+    color: white;
+    font-size: 4vw;
+    @extend .shadow_box;
+}
