@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body h1,
+body h2,
+body h3 {
+  margin: 0;
+}
+
+body p {
+  margin: 0;
+}
+
+body a {
+  text-decoration: none;
+  color: unset;
+}
+
+.shadow_box, main .menu .card, .btn-degrade, main .menu a {
+  -webkit-box-shadow: 0px 1.33333333333vw 2.66666666667vw 0.533333333333vw #dcdcdc;
+          box-shadow: 0px 1.33333333333vw 2.66666666667vw 0.533333333333vw #dcdcdc;
+}
+
+.hearth-click:hover, main .menu h1 .fa-heart:hover {
+  font-weight: bold;
+  background: -webkit-linear-gradient(250deg, #9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+main .restaurant_picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 69.6vw;
+  width: 100vw;
+  background: red;
+}
+
+main .restaurant_picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .menu {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -50px;
+  background: #f4f4f4;
+  height: 1161px;
+  border-radius: 40px 40px 0 0;
+  padding: 35px 14px;
+}
+
+main .menu .entries,
+main .menu .main_course,
+main .menu .dessert {
+  width: 100%;
+}
+
+main .menu .entries .card:nth-child(2),
+main .menu .main_course .card:nth-child(2),
+main .menu .dessert .card:nth-child(2) {
+  -webkit-animation: show 1s;
+          animation: show 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+main .menu .entries .card:nth-child(3),
+main .menu .main_course .card:nth-child(3),
+main .menu .dessert .card:nth-child(3) {
+  -webkit-animation: show 1s;
+          animation: show 1s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+main .menu .entries .card:nth-child(4),
+main .menu .main_course .card:nth-child(4),
+main .menu .dessert .card:nth-child(4) {
+  -webkit-animation: show 1s;
+          animation: show 1s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes show {
+  0% {
+    opacity: 0.1;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0.1;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+main .menu h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 10px;
+  font-family: "Shrikhand", cursive;
+  font-size: 7vw;
+}
+
+main .menu h2 {
+  width: 40px;
+  font-size: 17px;
+  border-bottom: solid 3px #99e2d0;
+  padding-bottom: 9px;
+  margin-bottom: 14px;
+  margin-top: 30px;
+  font-weight: 300;
+}
+
+main .menu .card {
+  opacity: 0;
+  background: white;
+  height: 68px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  border-radius: 15px;
+  margin-bottom: 16px;
+}
+
+main .menu .card:hover div.check {
+  visibility: visible;
+  width: 65px;
+}
+
+main .menu .card:hover path {
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+}
+
+main .menu .card .name {
+  width: 230px;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+
+main .menu .card .name h3 {
+  font-weight: 500;
+}
+
+main .menu .card .name p {
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+main .menu .card .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .menu .card .price span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main .menu .card .price .check {
+  background-color: #99e2d0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: hidden;
+  height: 100%;
+  width: 0;
+  right: 0;
+  -webkit-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+}
+
+main .menu .card .price .check svg {
+  width: 50%;
+  height: 50%;
+  fill: white;
+}
+
+main .menu .card .price .check svg path {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 2s ease-in-out;
+  transition: -webkit-transform 2s ease-in-out;
+  transition: transform 2s ease-in-out;
+  transition: transform 2s ease-in-out, -webkit-transform 2s ease-in-out;
+}
+
+main .menu a {
+  margin-top: 46px;
+  font-size: 4vw;
+  font-weight: 500;
+}
+
+.btn-degrade, main .menu a {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 7vw;
+  width: 58.133333333333333vw;
+  height: 13.333333333333333vw;
+  color: white;
+  font-size: 4vw;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 16.8vw;
+}
+
+header a {
+  position: absolute;
+  left: 5.86666666667vw;
+  font-size: 6vw;
+}
+
+header img {
+  width: 44vw;
+}
+
+footer {
+  padding-top: 5.86666666667vw;
+  padding-left: 5.86666666667vw;
+  padding-bottom: 9.33333333333vw;
+  background: #282828;
+  height: 37.3333333333vw;
+  color: white;
+}
+
+footer svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 5.33333333333vw;
+}
+
+footer svg path {
+  fill: white;
+}
+
+footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 26.6666666667vw;
+  margin-top: 5.33333333333vw;
+  font-size: 4vw;
+}
+
+footer div i {
+  margin-right: 2.66666666667vw;
+}
+
+footer div i.fa-hands-helping {
+  font-size: 2.8vw;
+}
+/*# sourceMappingURL=menu.css.map */

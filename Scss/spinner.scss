@@ -1,0 +1,40 @@
+/* .contenaire{
+    background: rgba(0, 0, 0, 0.6);
+ 
+} */
+.spinner {
+    background: rgba(0, 0, 0, 0.193);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    /* animation: rotation 2s linear infinite; */
+
+    .boxCircle_1 {
+        background: rgba(165, 42, 42, 0.412);
+    }
+}
+.circle {
+    position: absolute;
+    clip-path: circle(10%);
+    width: 20%;
+    height: 20%;
+    /* height: 100%; */
+}
+.circle:nth-child(1) {
+    // transform: translateY(-50%) rotate();
+    background: blue;
+}
+// .circle:nth-child(2) {
+//     transform: translateY(-35%);
+//     background-color: red;
+// }
+@keyframes rotation {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

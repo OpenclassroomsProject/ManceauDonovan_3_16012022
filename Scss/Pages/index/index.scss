@@ -1,0 +1,248 @@
+@import "../../Base/base";
+@import "../../Utils/variables";
+@import "../../Layout/header";
+@import "../../Components/btn-degrade";
+@import "../../Components/hearth-click";
+@import "../../Layout/footer";
+body {
+    .background_loader {
+        background: rgba(0, 0, 0, 0.4);
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+        animation: show_and_unshow_element 3s linear;
+        @keyframes show_and_unshow_element {
+            0% {
+                visibility: visible;
+            }
+            100% {
+                visibility: hidden;
+            }
+        }
+        .spin_loader {
+            // background: $pink;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: spinner 3s linear;
+            @keyframes spinner {
+                0% {
+                    transform: rotate(0);
+                }
+                100% {
+                    transform: rotate(6turn);
+                }
+            }
+            div {
+                @mixin ball_appearance($percentage: 1) {
+                    background-color: rgba($purple, $percentage);
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 100%;
+                    position: absolute;
+                    content: "";
+                }
+                @include ball_appearance(0.7);
+                position: relative;
+                top: -75%;
+                &::after {
+                    top: 30%;
+                    left: 90%;
+                    // background: #9356dc;
+                    @include ball_appearance;
+                }
+                &::before {
+                    right: 90%;
+                    top: 30%;
+                    @include ball_appearance(0.5);
+                    // background: rgba(147, 86, 220, 0.5);
+                }
+            }
+        }
+    }
+    .localisation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(229, 229, 229);
+        box-shadow: inset 0px 24px 44px -45px rgba(0, 0, 0, 0.95);
+        height: 13.333333333333333vw;
+        padding-right: 5.333333333333333vw;
+        font-size: 5vw;
+        i {
+            margin-right: 4.8vw;
+        }
+    }
+    main {
+        .description {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: $grey;
+            height: 76.533333333333333vw;
+
+            h1 {
+                margin-top: 10.666666666666667vw;
+                padding-left: 16vw;
+                padding-right: 19.733333333333333vw;
+                font-size: 7vw;
+            }
+            p {
+                margin-top: 5.333333333333333vw;
+                margin-bottom: 9.066666666666667vw;
+                margin-left: 8vw;
+                margin-right: 8vw;
+                font-size: 5vw;
+            }
+            a {
+                color: white;
+                @extend .btn-degrade;
+            }
+        }
+        .functioning,
+        .restaurants {
+            padding-left: 5.333333333333333vw;
+            padding-right: 5.333333333333333vw;
+        }
+        .functioning {
+            padding-top: 13.866666666666667vw;
+            height: 103.466666666666667vw;
+            h1 {
+                margin-bottom: 5.866666666666667vw;
+                font-size: 6.5vw;
+            }
+            .steps {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                .card {
+                    display: flex;
+                    align-items: center;
+                    height: 19.733333333333333vw;
+                    width: calc(100% - 3.466666666666667vw);
+                    background: $grey;
+                    border-radius: 5.333333333333333vw;
+                    margin-bottom: 6.4vw;
+                    @extend .shadow_box;
+                    &.active {
+                        background: rgb(241, 231, 254);
+                        i {
+                            color: $purple;
+                        }
+                    }
+                    .step_number {
+                        position: relative;
+                        right: 2.666666666666667vw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 100%;
+                        background: $purple;
+                        height: 6.4vw;
+                        width: 6.4vw;
+                        color: white;
+                    }
+                    i {
+                        color: rgb(107, 107, 107);
+                        margin-left: 2.933333333333333vw;
+                        margin-right: 7.466666666666667vw;
+                        font-size: 6vw;
+                    }
+                    p {
+                        font-size: 5vw;
+                    }
+                }
+            }
+        }
+        .restaurants {
+            padding-top: 15.466666666666667vw;
+            background: $grey;
+            height: 311.466666666666667vw;
+            h1 {
+                margin-bottom: 6.933333333333333vw;
+                font-size: 7vw;
+            }
+            .list {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 282.133333333333333vw;
+                .card {
+                    &:focus-visible {
+                        outline: none;
+                    }
+                    display: flex;
+                    flex-direction: column;
+                    height: 66.933333333333333vw;
+                    &.new::before {
+                        content: "Nouveau";
+                        position: absolute;
+                        right: calc(0% + 5.333333333333333vw);
+                        height: 7.73333333333vw;
+                        width: 21.6vw;
+                        background: #99e2d0;
+                        margin-right: 3.2vw;
+                        margin-top: 3.46666666667vw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: rgb(14, 118, 83);
+                        font-size: 4.26666666667vw;
+                    }
+                    .picture {
+                        height: 46.4%;
+                        picture {
+                            height: 69.322709163346614%;
+                            img {
+                                object-fit: cover;
+                                height: 100%;
+                                width: 100%;
+                                border-radius: 5.333333333333333vw 5.333333333333333vw 0 0;
+                            }
+                        }
+                    }
+                    .detail {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        height: 12.5333333333vw;
+                        padding-top: 4vw;
+                        padding-bottom: 4vw;
+                        padding-left: 3.2vw;
+                        padding-right: 6.4vw;
+                        border-radius: 0 0 5.333333333333333vw 5.333333333333333vw;
+                        @extend .shadow_box;
+
+                        .text {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            height: 100%;
+                            h2 {
+                                font-size: 6vw;
+                            }
+                            p {
+                                font-size: 5vw;
+                            }
+                        }
+                        i {
+                            font-size: 7vw;
+                            &.fa-heart {
+                                @extend .hearth-click;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

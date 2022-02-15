@@ -1,0 +1,9 @@
+.hearth-click {
+    &:hover {
+        font-weight: bold;
+        background: -webkit-linear-gradient(250deg, $purple, $pink);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+}
