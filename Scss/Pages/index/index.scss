@@ -88,20 +88,22 @@ body {
             align-items: center;
             text-align: center;
             background: $grey;
-            height: 76.533333333333333vw;
-
+            height: calc(76.533333333333333vw - 15.2vw);
+            padding-bottom: 15.2vw;
             h1 {
                 margin-top: 10.666666666666667vw;
                 padding-left: 16vw;
                 padding-right: 19.733333333333333vw;
-                font-size: 7vw;
+                font-size: 6.67vw;
             }
             p {
                 margin-top: 5.333333333333333vw;
-                margin-bottom: 9.066666666666667vw;
+                margin-bottom: 6.6vw;
+                // margin-bottom: 30px;
                 margin-left: 8vw;
                 margin-right: 8vw;
-                font-size: 5vw;
+                font-size: 4vw;
+                font-weight: 100;
             }
             a {
                 color: white;
@@ -198,10 +200,10 @@ body {
                         color: rgb(14, 118, 83);
                         font-size: 4.26666666667vw;
                     }
-                    .picture {
-                        height: 46.4%;
+                    .click_picture {
+                        height: 69.3227091633%;
                         picture {
-                            height: 69.322709163346614%;
+                            // height: 69.322709163346614%;
                             img {
                                 object-fit: cover;
                                 height: 100%;
@@ -214,19 +216,22 @@ body {
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
-                        height: 12.5333333333vw;
-                        padding-top: 4vw;
-                        padding-bottom: 4vw;
-                        padding-left: 3.2vw;
-                        padding-right: 6.4vw;
+                        height: calc(12.5333333333vw + 8vw);
+                        // padding-top: 4vw;
+                        // padding-bottom: 4vw;
+                        // padding-left: 3.2vw;
+                        // padding-right: 6.4vw;
                         border-radius: 0 0 5.333333333333333vw 5.333333333333333vw;
                         @extend .shadow_box;
-
                         .text {
                             display: flex;
                             flex-direction: column;
                             justify-content: space-between;
-                            height: 100%;
+                            flex-grow: 1;
+                            padding-top: 4vw;
+                            padding-bottom: 4vw;
+                            padding-left: 3.2vw;
+                            padding-right: 6.4vw;
                             h2 {
                                 font-size: 6vw;
                             }
@@ -236,6 +241,7 @@ body {
                         }
                         i {
                             font-size: 7vw;
+                            margin-right: 6.4vw;
                             &.fa-heart {
                                 @extend .hearth-click;
                             }

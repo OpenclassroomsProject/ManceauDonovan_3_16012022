@@ -1,0 +1,173 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .localisation {
+  height: 3vw;
+  font-size: 2vw;
+}
+
+body main #restaurants {
+  -webkit-transition: top 1.4s cubic-bezier(0.49, 0.22, 0.52, 1.35);
+  transition: top 1.4s cubic-bezier(0.49, 0.22, 0.52, 1.35);
+}
+
+body main .description {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0;
+}
+
+body main .description h1 {
+  margin-top: 4vw;
+  font-size: 4vw;
+}
+
+body main .description p {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  font-size: 2vw;
+}
+
+body main .description a {
+  width: 25vw;
+  height: 5vw;
+  font-size: 1.8vw;
+  margin-bottom: 4vw;
+}
+
+body main .desktop-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .desktop-main h1 {
+  font-size: 3vw;
+  margin-bottom: 0;
+}
+
+body main .desktop-main .functioning,
+body main .desktop-main .restaurants {
+  height: calc(100vh - 3vw);
+  background: white;
+}
+
+body main .desktop-main .functioning {
+  width: 35vw;
+  padding-top: 0;
+  padding-right: 0;
+}
+
+body main .desktop-main .functioning h1 {
+  margin-top: 5vw;
+}
+
+body main .desktop-main .functioning .steps {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 80vh;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body main .desktop-main .functioning .steps .card {
+  height: 7vw;
+  margin: 0;
+}
+
+body main .desktop-main .functioning .steps .card .step_number {
+  right: 0.666667vw;
+  height: 7vw;
+  width: 7vw;
+  font-size: 2vw;
+}
+
+body main .desktop-main .functioning .steps .card .click_picture a {
+  height: 80%;
+}
+
+body main .desktop-main .functioning .steps .card i {
+  margin: 0;
+  margin-right: 1vw;
+  font-size: 3vw;
+}
+
+body main .desktop-main .functioning .steps .card p {
+  font-size: 1.7vw;
+}
+
+body main .desktop-main .restaurants {
+  width: 50%;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .desktop-main .restaurants h1 {
+  margin-top: 1.5vw;
+  margin-bottom: 2vw;
+}
+
+body main .desktop-main .restaurants .list {
+  height: 78vh;
+  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 10%;
+  overflow: scroll;
+}
+
+body main .desktop-main .restaurants .list .card {
+  height: 20vw;
+  margin-bottom: 2vw;
+}
+
+body main .desktop-main .restaurants .list .card .click_picture {
+  height: 15vw;
+}
+
+body main .desktop-main .restaurants .list .card .click_picture img {
+  border-radius: 2.5vw 2.5vw 0 0;
+}
+
+body main .desktop-main .restaurants .list .card .detail {
+  height: 6vw;
+  border-radius: 0 0 2.5vw 2.5vw;
+}
+
+body main .desktop-main .restaurants .list .card .detail .text {
+  padding: 0;
+  padding-left: 1.5vw;
+}
+
+body main .desktop-main .restaurants .list .card .detail .text h2,
+body main .desktop-main .restaurants .list .card .detail .text p {
+  font-size: 2vw;
+}
+
+body main .desktop-main .restaurants .list .card .detail i {
+  margin-right: 1.5vw;
+  font-size: 2vw;
+}
+/*# sourceMappingURL=index_desktop.css.map */

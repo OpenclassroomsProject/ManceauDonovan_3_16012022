@@ -47,6 +47,18 @@ header img {
   width: 44vw;
 }
 
+@media screen and (min-width: 860px) {
+  body header {
+    height: 3.47222222222vw;
+  }
+  body header a {
+    font-size: 3vw;
+  }
+  body header img {
+    width: 20vw;
+  }
+}
+
 .btn-degrade, body main .description a {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(#ff79da, #9356dc);
@@ -66,12 +78,39 @@ header img {
   font-size: 4vw;
 }
 
+.btn-degrade:hover, body main .description a:hover {
+  opacity: 0.9;
+  -webkit-box-shadow: 0px 1.33333333333vw 2.66666666667vw 1.5vw #dcdcdc;
+          box-shadow: 0px 1.33333333333vw 2.66666666667vw 1.5vw #dcdcdc;
+}
+
 .hearth-click:hover, body main .restaurants .list .card .detail i.fa-heart:hover {
+  cursor: pointer;
+  color: transparent;
   font-weight: bold;
-  background: -webkit-linear-gradient(250deg, #9356dc, #ff79da);
+  background: linear-gradient(250deg, #9356dc, #ff79da);
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
+  -webkit-animation: animated_gradient 1s;
+          animation: animated_gradient 1s;
+}
+
+@-webkit-keyframes animated_gradient {
+  0% {
+    opacity: 20%;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animated_gradient {
+  0% {
+    opacity: 20%;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 footer {
@@ -119,6 +158,37 @@ footer div i {
 
 footer div i.fa-hands-helping {
   font-size: 2.8vw;
+}
+
+@media screen and (min-width: 860px) {
+  footer {
+    padding: 0;
+    height: 3vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer svg {
+    height: 3vw;
+  }
+  footer div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    font-size: 1vw;
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer div i.fa-hands-helping {
+    font-size: 1vw;
+  }
 }
 
 body .background_loader {
@@ -266,22 +336,24 @@ body main .description {
           align-items: center;
   text-align: center;
   background: #f4f4f4;
-  height: 76.533333333333333vw;
+  height: calc(76.533333333333333vw - 15.2vw);
+  padding-bottom: 15.2vw;
 }
 
 body main .description h1 {
   margin-top: 10.666666666666667vw;
   padding-left: 16vw;
   padding-right: 19.733333333333333vw;
-  font-size: 7vw;
+  font-size: 6.67vw;
 }
 
 body main .description p {
   margin-top: 5.333333333333333vw;
-  margin-bottom: 9.066666666666667vw;
+  margin-bottom: 6.6vw;
   margin-left: 8vw;
   margin-right: 8vw;
-  font-size: 5vw;
+  font-size: 4vw;
+  font-weight: 100;
 }
 
 body main .description a {
@@ -431,15 +503,11 @@ body main .restaurants .list .card.new::before {
   font-size: 4.26666666667vw;
 }
 
-body main .restaurants .list .card .picture {
-  height: 46.4%;
+body main .restaurants .list .card .click_picture {
+  height: 69.3227091633%;
 }
 
-body main .restaurants .list .card .picture picture {
-  height: 69.322709163346614%;
-}
-
-body main .restaurants .list .card .picture picture img {
+body main .restaurants .list .card .click_picture picture img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
@@ -457,11 +525,7 @@ body main .restaurants .list .card .detail {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 12.5333333333vw;
-  padding-top: 4vw;
-  padding-bottom: 4vw;
-  padding-left: 3.2vw;
-  padding-right: 6.4vw;
+  height: calc(12.5333333333vw + 8vw);
   border-radius: 0 0 5.333333333333333vw 5.333333333333333vw;
 }
 
@@ -476,7 +540,13 @@ body main .restaurants .list .card .detail .text {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding-top: 4vw;
+  padding-bottom: 4vw;
+  padding-left: 3.2vw;
+  padding-right: 6.4vw;
 }
 
 body main .restaurants .list .card .detail .text h2 {
@@ -489,5 +559,6 @@ body main .restaurants .list .card .detail .text p {
 
 body main .restaurants .list .card .detail i {
   font-size: 7vw;
+  margin-right: 6.4vw;
 }
 /*# sourceMappingURL=index.css.map */
