@@ -28,3 +28,28 @@ footer {
         }
     }
 }
+@media screen and (min-width: 860px) {
+    footer {
+        padding: 0;
+        height: 3vw;
+        display: flex;
+        // // flex-direction: column-reverse;
+        // align-items: flex-end;
+        svg {
+            height: 3vw;
+        }
+        div {
+            flex-direction: row;
+            font-size: 1vw;
+            width: 100vw;
+            height: auto;
+            margin: 0;
+            padding-left: 2vw;
+            padding-right: 2vw;
+            align-items: center;
+            i.fa-hands-helping {
+                font-size: 1vw;
+            }
+        }
+    }
+}

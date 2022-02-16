@@ -4,7 +4,6 @@ main {
         display: flex;
         height: 69.6vw;
         width: 100vw;
-        background: red;
         img {
             width: 100%;
             height: 100%;
@@ -16,11 +15,14 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: -50px;
+        margin-top: -13.3333333333vw;
         background: $grey;
-        height: 1161px;
-        border-radius: 40px 40px 0 0;
-        padding: 35px 14px;
+        // height: 1161px;
+        border-radius: 10vw 10vw 0 0;
+        padding: 9.33333333333vw 3.73333333333vw;
+        .food {
+            width: 100%;
+        }
         .entries,
         .main_course,
         .dessert {
@@ -48,6 +50,9 @@ main {
             .card:nth-child(4) {
                 @include animation_show(0.6s);
             }
+            .card:nth-child(5) {
+                @include animation_show(0.9s);
+            }
 
             @keyframes show {
                 0% {
@@ -70,45 +75,69 @@ main {
             align-items: center;
             width: 100%;
             height: fit-content;
-            margin-bottom: 10px;
+            margin-bottom: 2.66666666667vw;
             font-family: "Shrikhand", cursive;
-            font-size: 7vw;
+            font-size: 8vw;
             .fa-heart {
+                margin-right: 4vw;
                 @extend .hearth-click;
             }
         }
         h2 {
-            width: 40px;
-            font-size: 17px;
+            width: 10.6666666667vw;
+            font-size: 4.53333333333vw;
             border-bottom: solid 3px $tertiary_color;
-            padding-bottom: 9px;
-            margin-bottom: 14px;
-            margin-top: 30px;
+            padding-bottom: 2.4vw;
+            margin-bottom: 3.73333333333vw;
+            margin-top: 8vw;
             font-weight: 300;
         }
         .card {
-            // visibility: hidden;
+            overflow: hidden;
             opacity: 0;
             // width: calc(100% - 28px);
             background: white;
             // height: calc(68px - 30px);
-            height: 68px;
-            width: 100%;
+            height: 18.1333333333vw;
+            // min-height: 18.1333333333vw;
             display: flex;
             justify-content: space-between;
             transform: translateY(40px);
             // transition: margin 700ms;
-            border-radius: 15px;
-            margin-bottom: 16px;
+            border-radius: 4vw;
+            margin-bottom: 4vw;
             @extend .shadow_box;
             &:hover {
-                div.check {
-                    visibility: visible;
-                    width: 65px;
+                .check {
+                    margin-right: 0 !important;
                 }
-                path {
-                    transform: rotate(720deg);
+                svg {
+                    animation: spinner-check 1s;
                 }
+                .name h3 {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .price span {
+                    margin-right: 2.93333333333vw;
+                }
+                @keyframes spinner-check {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    50% {
+                        transform: rotate(0deg);
+                    }
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+                // @keyframes reduce_margin-price {
+                //     0% {
+                //     }
+                //     100% {
+                //     }
+                // }
             }
 
             .name {
@@ -116,44 +145,48 @@ main {
                 white-space: nowrap;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
-                margin-top: 15px;
-                margin-bottom: 15px;
-                margin-left: 10px;
+                justify-content: space-evenly;
+                margin-top: 3.2vw;
+                margin-bottom: 3.2vw;
+                margin-left: 2.66666666667vw;
+                flex-grow: 1;
                 h3 {
                     font-weight: 500;
+                    font-size: 5vw;
                 }
                 p {
                     font-weight: 300;
                     white-space: nowrap;
+                    font-size: 3.7vw;
                     overflow: hidden;
+                    text-overflow: ellipsis;
                 }
             }
             .price {
                 display: flex;
+
                 span {
                     display: flex;
                     align-items: flex-end;
-                    // margin-bottom: -3px;
+                    margin-right: 5.86666666667vw;
+                    margin-bottom: 2.6vw;
+                    font-size: 3.7vw;
+                    transition: margin 1s ease-in-out;
                 }
                 .check {
                     background-color: $tertiary_color;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    visibility: hidden;
                     height: 100%;
-                    width: 0;
-                    right: 0;
-                    transition: width 1s ease-in-out;
+                    width: 17.3333333333vw;
+                    margin-right: -17.3333333333vw;
+                    transition: margin 1s ease-in-out;
+
                     svg {
                         width: 50%;
                         height: 50%;
                         fill: white;
-                        path {
-                            transform: rotate(0deg);
-                            transition: transform 2s ease-in-out;
-                        }
                     }
                 }
             }
@@ -163,6 +196,117 @@ main {
             font-size: 4vw;
             font-weight: 500;
             @extend .btn-degrade;
+        }
+    }
+}
+
+@media screen and (min-width: 860px) {
+    body {
+        main {
+            .restaurant_picture {
+                width: auto;
+                height: calc(100vh - 50px);
+            }
+            .menu {
+                position: relative;
+
+                padding-top: 3vw;
+                padding-bottom: 3vw;
+                transition: margin 2s;
+
+                animation: show_menu 3s;
+                animation-fill-mode: forwards;
+                @keyframes show_menu {
+                    100% {
+                        margin-top: -50vw;
+                    }
+                }
+                a {
+                    margin: 0;
+                    width: 20vw;
+                    height: 5vw;
+                    font-size: 2vw;
+                }
+                h1 {
+                    margin: 0;
+                    font-size: 5vw;
+                    justify-content: space-evenly;
+                }
+                .food {
+                    display: flex;
+                    .entries,
+                    .main_course,
+                    .dessert {
+                        width: 33%;
+                        align-items: center;
+                        display: flex;
+                        flex-direction: column;
+                        h2 {
+                            margin: 0;
+                            margin-bottom: 20px;
+                            padding: 0;
+                            font-size: 2vw;
+                            text-align: center;
+                        }
+                    }
+                    .card {
+                        width: 80%;
+                        height: 6vw;
+                        flex-direction: column;
+                        align-items: center;
+                        border-radius: 1.3vw;
+                        &:hover {
+                            .check {
+                                animation: spinner_desktop-check 1s;
+                            }
+                            @keyframes spinner_desktop-check {
+                                0% {
+                                    height: 0;
+                                    width: 0;
+                                }
+                                80% {
+                                    height: 100%;
+                                }
+                                100% {
+                                    height: 100%;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        .price {
+                            justify-content: center;
+
+                            span {
+                                margin: 0;
+                                font-size: 1.3vw;
+                                align-items: flex-start;
+                            }
+                            .check {
+                                width: 1%;
+                                height: 0;
+                                margin: 0;
+                                position: absolute;
+
+                                bottom: 0;
+
+                                animation-fill-mode: forwards;
+                                border-radius: 1.3vw;
+                            }
+                        }
+                        .name {
+                            width: auto;
+                            margin: 0;
+                            align-items: center;
+                            h3 {
+                                font-size: 1.5vw;
+                            }
+                            p {
+                                font-size: 1vw;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

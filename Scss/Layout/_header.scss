@@ -13,3 +13,17 @@ header {
         width: 44vw;
     }
 }
+
+@media screen and (min-width: 860px) {
+    body {
+        header {
+            height: 3.47222222222vw;
+            a {
+                font-size: 3vw;
+            }
+            img {
+                width: 20vw;
+            }
+        }
+    }
+}

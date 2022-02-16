@@ -9,4 +9,9 @@
     color: white;
     font-size: 4vw;
     @extend .shadow_box;
+    &:hover {
+        // background: red;
+        opacity: 0.9;
+        box-shadow: 0px 1.33333333333vw 2.66666666667vw 1.5vw #dcdcdc;
+    }
 }

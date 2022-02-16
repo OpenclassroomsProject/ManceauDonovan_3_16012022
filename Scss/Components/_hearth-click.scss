@@ -1,9 +1,20 @@
 .hearth-click {
     &:hover {
+        cursor: pointer;
+        color: transparent;
         font-weight: bold;
-        background: -webkit-linear-gradient(250deg, $purple, $pink);
+        background: linear-gradient(250deg, $purple, $pink);
         background-clip: text;
         -webkit-background-clip: text;
-        color: transparent;
+        animation: animated_gradient 1s;
+
+        @keyframes animated_gradient {
+            0% {
+                opacity: 20%;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
     }
 }
