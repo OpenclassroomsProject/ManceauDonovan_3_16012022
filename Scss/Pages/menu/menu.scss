@@ -1,6 +1,330 @@
 @import "../../Base/base";
 @import "../../Utils/variables";
-@import "../../Themes/menu";
+@import "../../Components/food-card-animation";
 @import "../../Components/btn-degrade";
+@import "../../Components/hearth-click";
 @import "../../Layout/header";
 @import "../../Layout/footer";
+
+main {
+    .restaurant_picture {
+        display: flex;
+        height: 69.6vw;
+        width: 100vw;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .menu {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -13.3333333333vw;
+        background: $grey;
+        // height: 1161px;
+        border-radius: 10vw 10vw 0 0;
+        padding: 9.33333333333vw 3.73333333333vw;
+        .food {
+            width: 100%;
+        }
+        .entries,
+        .main_course,
+        .dessert {
+            width: 100%;
+
+            .card:nth-child(2) {
+                @include animation_show;
+            }
+            .card:nth-child(3) {
+                @include animation_show(0.3s);
+            }
+            .card:nth-child(4) {
+                @include animation_show(0.6s);
+            }
+            .card:nth-child(5) {
+                @include animation_show(0.9s);
+            }
+        }
+        h1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: fit-content;
+            margin-bottom: 2.66666666667vw;
+            font-family: "Shrikhand", cursive;
+            font-size: 8vw;
+            .fa-heart {
+                margin-right: 4vw;
+                @extend .hearth-click;
+            }
+        }
+        h2 {
+            width: 10.6666666667vw;
+            font-size: 4.53333333333vw;
+            border-bottom: solid 3px $tertiary_color;
+            padding-bottom: 2.4vw;
+            margin-bottom: 3.73333333333vw;
+            margin-top: 8vw;
+            font-weight: 300;
+        }
+        .card {
+            overflow: hidden;
+            opacity: 0;
+            // width: calc(100% - 28px);
+            background: white;
+            // height: calc(68px - 30px);
+            height: 18.1333333333vw;
+            // min-height: 18.1333333333vw;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(40px);
+
+            border-radius: 4vw;
+            margin-bottom: 4vw;
+            @extend .shadow_box;
+            &:hover {
+                .check {
+                    margin-right: 0 !important;
+                }
+                svg {
+                    animation: spinner-check 1s;
+                }
+                .name h3 {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .price span {
+                    margin-right: 2.93333333333vw;
+                }
+                @keyframes spinner-check {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    50% {
+                        transform: rotate(0deg);
+                    }
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+
+            .name {
+                width: 230px;
+                white-space: nowrap;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                margin-top: 3.2vw;
+                margin-bottom: 3.2vw;
+                margin-left: 2.66666666667vw;
+                flex-grow: 1;
+                h3 {
+                    font-weight: 500;
+                    font-size: 5vw;
+                }
+                p {
+                    font-weight: 300;
+                    white-space: nowrap;
+                    font-size: 3.7vw;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+            .price {
+                display: flex;
+
+                span {
+                    display: flex;
+                    align-items: flex-end;
+                    margin-right: 5.86666666667vw;
+                    margin-bottom: 2.6vw;
+                    font-size: 3.7vw;
+                    transition: margin 1s ease-in-out;
+                }
+                .check {
+                    background-color: $tertiary_color;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    width: 17.3333333333vw;
+                    margin-right: -17.3333333333vw;
+                    transition: margin 1s ease-in-out;
+
+                    svg {
+                        width: 50%;
+                        height: 50%;
+                        fill: white;
+                    }
+                }
+            }
+        }
+        a {
+            margin-top: 46px;
+            font-size: 4vw;
+            font-weight: 500;
+            @extend .btn-degrade;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        height: 100%;
+        overflow: hidden;
+        main {
+            height: calc(100vh - 2.60416666667vw);
+            .restaurant_picture {
+                width: auto;
+                height: calc(100vh - 2.60416666667vw);
+            }
+            .menu {
+                padding: 0;
+                margin: 0;
+                height: fit-content;
+                position: absolute;
+                // top: 10%;
+                bottom: 2.60416666667vw;
+                width: 100%;
+                margin-bottom: -47vw;
+
+                // padding-bottom: 3vw;
+                // width: 100%;
+                // height: 45vw;
+                // top: 0;
+                // margin-top: 0;
+                // margin-top: -7.16145833333vw;
+
+                transition: margin 2s;
+                animation: show_menu 3s;
+                animation-fill-mode: forwards;
+                @keyframes show_menu {
+                    100% {
+                        margin-bottom: 0;
+                    }
+                }
+                a {
+                    margin: 0;
+                    margin-top: 2vh;
+                    margin-bottom: 2vh;
+                    width: 20vw;
+                    height: 5vw;
+                    font-size: 2vw;
+                }
+                h1 {
+                    margin: 0;
+                    font-size: 4vw;
+                    justify-content: space-evenly;
+                    height: 7.16145833333vw;
+                }
+                .food {
+                    display: flex;
+                    .entries,
+                    .main_course,
+                    .dessert {
+                        width: 33%;
+                        align-items: center;
+                        display: flex;
+                        flex-direction: column;
+                        // justify-content: space-between;
+                        // height: 50vh;
+                        h2 {
+                            margin: 0;
+                            margin-bottom: 20px;
+                            padding: 0;
+                            font-size: 2vw;
+                            text-align: center;
+                        }
+                    }
+                    .card {
+                        width: 80%;
+                        height: 6vw;
+                        flex-direction: column;
+                        align-items: center;
+                        border-radius: 1.3vw;
+                        margin-bottom: 1vw;
+                        &:hover {
+                            .check {
+                                animation: spinner_desktop-check 1s;
+                            }
+                            @keyframes spinner_desktop-check {
+                                0% {
+                                    height: 0;
+                                    width: 0;
+                                }
+                                80% {
+                                    height: 100%;
+                                }
+                                100% {
+                                    height: 100%;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        .price {
+                            justify-content: center;
+
+                            span {
+                                margin: 0;
+                                font-size: 1.3vw;
+                                align-items: flex-start;
+                            }
+                            .check {
+                                width: 1%;
+                                height: 0;
+                                margin: 0;
+                                position: absolute;
+
+                                bottom: 0;
+
+                                animation-fill-mode: forwards;
+                                border-radius: 1.3vw;
+                            }
+                        }
+                        .name {
+                            width: auto;
+                            margin: 0;
+                            align-items: center;
+                            h3 {
+                                font-size: 1.5vw;
+                            }
+                            p {
+                                font-size: 1vw;
+                            }
+                        }
+                    }
+                    .card:nth-child(2) {
+                        @include animation_show(1s);
+                    }
+                    .card:nth-child(3) {
+                        @include animation_show(1.3s);
+                    }
+                    .card:nth-child(4) {
+                        @include animation_show(1.6s);
+                    }
+                    .card:nth-child(5) {
+                        @include animation_show(1.9s);
+                    }
+                }
+            }
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            transform: translateY(3.47222222222vw);
+            animation: show_footer 1s;
+            animation-fill-mode: forwards;
+
+            @keyframes show_footer {
+                100% {
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+}

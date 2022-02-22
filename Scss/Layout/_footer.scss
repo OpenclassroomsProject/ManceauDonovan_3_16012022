@@ -28,11 +28,14 @@ footer {
         }
     }
 }
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 768px) {
     footer {
         padding: 0;
-        height: 3vw;
+        height: 2.60416666667vw;
+        // height: 6.51041666667vw;
+
         display: flex;
+        align-items: center;
         // // flex-direction: column-reverse;
         // align-items: flex-end;
         svg {

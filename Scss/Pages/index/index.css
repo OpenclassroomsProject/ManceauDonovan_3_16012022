@@ -47,15 +47,15 @@ header img {
   width: 44vw;
 }
 
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 768px) {
   body header {
-    height: 3.47222222222vw;
+    height: 2.60416666667vw;
   }
   body header a {
     font-size: 3vw;
   }
   body header img {
-    width: 20vw;
+    width: 13vw;
   }
 }
 
@@ -160,13 +160,16 @@ footer div i.fa-hands-helping {
   font-size: 2.8vw;
 }
 
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 768px) {
   footer {
     padding: 0;
-    height: 3vw;
+    height: 2.60416666667vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   footer svg {
     height: 3vw;

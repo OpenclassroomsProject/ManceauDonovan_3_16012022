@@ -19,9 +19,64 @@ body a {
   color: unset;
 }
 
-.shadow_box, main .menu .card, .btn-degrade, main .menu a {
+.shadow_box, .btn-degrade, main .menu a, main .menu .card {
   -webkit-box-shadow: 0px 1.33333333333vw 2.66666666667vw 0.533333333333vw #dcdcdc;
           box-shadow: 0px 1.33333333333vw 2.66666666667vw 0.533333333333vw #dcdcdc;
+}
+
+@-webkit-keyframes show {
+  0% {
+    opacity: 0.1;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0.1;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.btn-degrade, main .menu a {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 7vw;
+  width: 58.133333333333333vw;
+  height: 13.333333333333333vw;
+  color: white;
+  font-size: 4vw;
+}
+
+.btn-degrade:hover, main .menu a:hover {
+  opacity: 0.9;
+  -webkit-box-shadow: 0px 1.33333333333vw 2.66666666667vw 1.5vw #dcdcdc;
+          box-shadow: 0px 1.33333333333vw 2.66666666667vw 1.5vw #dcdcdc;
 }
 
 .hearth-click:hover, main .menu h1 .fa-heart:hover {
@@ -50,6 +105,122 @@ body a {
   }
   100% {
     opacity: 1;
+  }
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 16.8vw;
+}
+
+header a {
+  position: absolute;
+  left: 5.86666666667vw;
+  font-size: 6vw;
+}
+
+header img {
+  width: 44vw;
+}
+
+@media screen and (min-width: 768px) {
+  body header {
+    height: 2.60416666667vw;
+  }
+  body header a {
+    font-size: 3vw;
+  }
+  body header img {
+    width: 13vw;
+  }
+}
+
+footer {
+  padding-top: 5.86666666667vw;
+  padding-left: 5.86666666667vw;
+  padding-bottom: 9.33333333333vw;
+  background: #282828;
+  height: 37.3333333333vw;
+  color: white;
+}
+
+footer svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 5.33333333333vw;
+}
+
+footer svg path {
+  fill: white;
+}
+
+footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 26.6666666667vw;
+  margin-top: 5.33333333333vw;
+  font-size: 4vw;
+}
+
+footer div i {
+  margin-right: 2.66666666667vw;
+}
+
+footer div i.fa-hands-helping {
+  font-size: 2.8vw;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    padding: 0;
+    height: 2.60416666667vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer svg {
+    height: 3vw;
+  }
+  footer div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    font-size: 1vw;
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer div i.fa-hands-helping {
+    font-size: 1vw;
   }
 }
 
@@ -136,36 +307,6 @@ main .menu .dessert .card:nth-child(5) {
           animation-delay: 0.9s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes show {
-  0% {
-    opacity: 0.1;
-    -webkit-transition: -webkit-transform 1s;
-    transition: -webkit-transform 1s;
-    transition: transform 1s;
-    transition: transform 1s, -webkit-transform 1s;
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes show {
-  0% {
-    opacity: 0.1;
-    -webkit-transition: -webkit-transform 1s;
-    transition: -webkit-transform 1s;
-    transition: transform 1s;
-    transition: transform 1s, -webkit-transform 1s;
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
 }
 
 main .menu h1 {
@@ -350,15 +491,28 @@ main .menu a {
   font-weight: 500;
 }
 
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 768px) {
+  body {
+    height: 100%;
+    overflow: hidden;
+  }
+  body main {
+    height: calc(100vh - 2.60416666667vw);
+  }
   body main .restaurant_picture {
     width: auto;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 2.60416666667vw);
   }
   body main .menu {
-    position: relative;
-    padding-top: 3vw;
-    padding-bottom: 3vw;
+    padding: 0;
+    margin: 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: absolute;
+    bottom: 2.60416666667vw;
+    width: 100%;
+    margin-bottom: -47vw;
     -webkit-transition: margin 2s;
     transition: margin 2s;
     -webkit-animation: show_menu 3s;
@@ -368,26 +522,29 @@ main .menu a {
   }
   @-webkit-keyframes show_menu {
     100% {
-      margin-top: -50vw;
+      margin-bottom: 0;
     }
   }
   @keyframes show_menu {
     100% {
-      margin-top: -50vw;
+      margin-bottom: 0;
     }
   }
   body main .menu a {
     margin: 0;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
     width: 20vw;
     height: 5vw;
     font-size: 2vw;
   }
   body main .menu h1 {
     margin: 0;
-    font-size: 5vw;
+    font-size: 4vw;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    height: 7.16145833333vw;
   }
   body main .menu .food {
     display: -webkit-box;
@@ -429,6 +586,7 @@ main .menu a {
         -ms-flex-align: center;
             align-items: center;
     border-radius: 1.3vw;
+    margin-bottom: 1vw;
   }
   body main .menu .food .card:hover .check {
     -webkit-animation: spinner_desktop-check 1s;
@@ -495,143 +653,59 @@ main .menu a {
   body main .menu .food .card .name p {
     font-size: 1vw;
   }
-}
-
-.btn-degrade, main .menu a {
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(#ff79da, #9356dc);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 7vw;
-  width: 58.133333333333333vw;
-  height: 13.333333333333333vw;
-  color: white;
-  font-size: 4vw;
-}
-
-.btn-degrade:hover, main .menu a:hover {
-  opacity: 0.9;
-  -webkit-box-shadow: 0px 1.33333333333vw 2.66666666667vw 1.5vw #dcdcdc;
-          box-shadow: 0px 1.33333333333vw 2.66666666667vw 1.5vw #dcdcdc;
-}
-
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 16.8vw;
-}
-
-header a {
-  position: absolute;
-  left: 5.86666666667vw;
-  font-size: 6vw;
-}
-
-header img {
-  width: 44vw;
-}
-
-@media screen and (min-width: 860px) {
-  body header {
-    height: 3.47222222222vw;
+  body main .menu .food .card:nth-child(2) {
+    -webkit-animation: show 1s;
+            animation: show 1s;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
-  body header a {
-    font-size: 3vw;
+  body main .menu .food .card:nth-child(3) {
+    -webkit-animation: show 1s;
+            animation: show 1s;
+    -webkit-animation-delay: 1.3s;
+            animation-delay: 1.3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
-  body header img {
-    width: 20vw;
+  body main .menu .food .card:nth-child(4) {
+    -webkit-animation: show 1s;
+            animation: show 1s;
+    -webkit-animation-delay: 1.6s;
+            animation-delay: 1.6s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
-}
-
-footer {
-  padding-top: 5.86666666667vw;
-  padding-left: 5.86666666667vw;
-  padding-bottom: 9.33333333333vw;
-  background: #282828;
-  height: 37.3333333333vw;
-  color: white;
-}
-
-footer svg {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 5.33333333333vw;
-}
-
-footer svg path {
-  fill: white;
-}
-
-footer div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 26.6666666667vw;
-  margin-top: 5.33333333333vw;
-  font-size: 4vw;
-}
-
-footer div i {
-  margin-right: 2.66666666667vw;
-}
-
-footer div i.fa-hands-helping {
-  font-size: 2.8vw;
-}
-
-@media screen and (min-width: 860px) {
-  footer {
-    padding: 0;
-    height: 3vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  body main .menu .food .card:nth-child(5) {
+    -webkit-animation: show 1s;
+            animation: show 1s;
+    -webkit-animation-delay: 1.9s;
+            animation-delay: 1.9s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
-  footer svg {
-    height: 3vw;
+  body footer {
+    position: fixed;
+    bottom: 0;
+    -webkit-transform: translateY(3.47222vw);
+            transform: translateY(3.47222vw);
+    -webkit-animation: show_footer 1s;
+            animation: show_footer 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
-  footer div {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    font-size: 1vw;
-    width: 100vw;
-    height: auto;
-    margin: 0;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  @-webkit-keyframes show_footer {
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
   }
-  footer div i.fa-hands-helping {
-    font-size: 1vw;
+  @keyframes show_footer {
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
   }
 }
 /*# sourceMappingURL=menu.css.map */
