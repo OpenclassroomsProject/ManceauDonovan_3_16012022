@@ -1,0 +1,29 @@
+@mixin animation_show($delay: false, $duration: 1s) {
+    @if ($delay) {
+        animation: show $duration;
+        animation-delay: $delay;
+    } @else {
+        animation: show $duration;
+    }
+    animation-fill-mode: forwards;
+
+    // @if (opacity = 1) {
+    //     background: red;
+    // }
+}
+// // animation: show 3s linear;
+
+@keyframes show {
+    0% {
+        // visibility: visible;
+        opacity: 0.1;
+        // transition: margin 1s;
+        transition: transform 1s;
+    }
+    100% {
+        opacity: 1;
+        // margin-top: 0;
+        transform: translateY(0);
+        // animation-timing-function: step-end;
+    }
+}
