@@ -7,7 +7,6 @@ footer {
     color: white;
     svg {
         display: flex;
-        width: fit-content;
         height: 5.33333333333vw;
         path {
             fill: white;
@@ -39,7 +38,7 @@ footer {
         // // flex-direction: column-reverse;
         // align-items: flex-end;
         svg {
-            height: 3vw;
+            height: 100%;
         }
         div {
             flex-direction: row;
