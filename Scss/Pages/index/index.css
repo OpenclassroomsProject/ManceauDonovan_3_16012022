@@ -369,11 +369,11 @@ body main .functioning .steps .card {
   margin-bottom: 6.4vw;
 }
 
-body main .functioning .steps .card.active {
+body main .functioning .steps .card:hover {
   background: #f1e7fe;
 }
 
-body main .functioning .steps .card.active i {
+body main .functioning .steps .card:hover i {
   color: #9356dc;
 }
 

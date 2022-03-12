@@ -4,6 +4,7 @@
 @import "../../Components/btn-degrade";
 @import "../../Components/hearth-click";
 @import "../../Layout/footer";
+
 body {
     .background_loader {
         background: rgba(0, 0, 0, 0.4);
@@ -16,14 +17,17 @@ body {
         justify-content: center;
         visibility: hidden;
         animation: show_and_unshow_element 3s linear;
+
         @keyframes show_and_unshow_element {
             0% {
                 visibility: visible;
             }
+
             100% {
                 visibility: hidden;
             }
         }
+
         .spin_loader {
             // background: $pink;
             width: 20px;
@@ -33,14 +37,17 @@ body {
             align-items: center;
             justify-content: center;
             animation: spinner 3s linear;
+
             @keyframes spinner {
                 0% {
                     transform: rotate(0);
                 }
+
                 100% {
                     transform: rotate(6turn);
                 }
             }
+
             div {
                 @mixin ball_appearance($percentage: 1) {
                     background-color: rgba($purple, $percentage);
@@ -50,15 +57,18 @@ body {
                     position: absolute;
                     content: "";
                 }
+
                 @include ball_appearance(0.7);
                 position: relative;
                 top: -75%;
+
                 &::after {
                     top: 30%;
                     left: 90%;
                     // background: #9356dc;
                     @include ball_appearance;
                 }
+
                 &::before {
                     right: 90%;
                     top: 30%;
@@ -68,6 +78,7 @@ body {
             }
         }
     }
+
     .localisation {
         display: flex;
         justify-content: center;
@@ -77,10 +88,12 @@ body {
         height: 13.333333333333333vw;
         padding-right: 5.333333333333333vw;
         font-size: 5vw;
+
         i {
             margin-right: 4.8vw;
         }
     }
+
     main {
         .description {
             display: flex;
@@ -90,12 +103,14 @@ body {
             background: $grey;
             height: calc(76.533333333333333vw - 15.2vw);
             padding-bottom: 15.2vw;
+
             h1 {
                 margin-top: 10.666666666666667vw;
                 padding-left: 16vw;
                 padding-right: 19.733333333333333vw;
                 font-size: 6.67vw;
             }
+
             p {
                 margin-top: 5.333333333333333vw;
                 margin-bottom: 6.6vw;
@@ -105,27 +120,33 @@ body {
                 font-size: 4vw;
                 font-weight: 100;
             }
+
             a {
                 color: white;
                 @extend .btn-degrade;
             }
         }
+
         .functioning,
         .restaurants {
             padding-left: 5.333333333333333vw;
             padding-right: 5.333333333333333vw;
         }
+
         .functioning {
             padding-top: 13.866666666666667vw;
             height: 103.466666666666667vw;
+
             h1 {
                 margin-bottom: 5.866666666666667vw;
                 font-size: 6.5vw;
             }
+
             .steps {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
+
                 .card {
                     display: flex;
                     align-items: center;
@@ -135,12 +156,15 @@ body {
                     border-radius: 5.333333333333333vw;
                     margin-bottom: 6.4vw;
                     @extend .shadow_box;
-                    &.active {
+
+                    &:hover {
                         background: rgb(241, 231, 254);
+
                         i {
                             color: $purple;
                         }
                     }
+
                     .step_number {
                         position: relative;
                         right: 2.666666666666667vw;
@@ -153,38 +177,46 @@ body {
                         width: 6.4vw;
                         color: white;
                     }
+
                     i {
                         color: rgb(107, 107, 107);
                         margin-left: 2.933333333333333vw;
                         margin-right: 7.466666666666667vw;
                         font-size: 6vw;
                     }
+
                     p {
                         font-size: 5vw;
                     }
                 }
             }
         }
+
         .restaurants {
             padding-top: 15.466666666666667vw;
             background: $grey;
             height: 311.466666666666667vw;
+
             h1 {
                 margin-bottom: 6.933333333333333vw;
                 font-size: 7vw;
             }
+
             .list {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 height: 282.133333333333333vw;
+
                 .card {
                     &:focus-visible {
                         outline: none;
                     }
+
                     display: flex;
                     flex-direction: column;
                     height: 66.933333333333333vw;
+
                     &.new::before {
                         content: "Nouveau";
                         position: absolute;
@@ -200,9 +232,12 @@ body {
                         color: rgb(14, 118, 83);
                         font-size: 4.26666666667vw;
                     }
+
                     .click_picture {
                         height: 69.3227091633%;
+
                         picture {
+
                             // height: 69.322709163346614%;
                             img {
                                 object-fit: cover;
@@ -212,6 +247,7 @@ body {
                             }
                         }
                     }
+
                     .detail {
                         display: flex;
                         justify-content: space-between;
@@ -223,6 +259,7 @@ body {
                         // padding-right: 6.4vw;
                         border-radius: 0 0 5.333333333333333vw 5.333333333333333vw;
                         @extend .shadow_box;
+
                         .text {
                             display: flex;
                             flex-direction: column;
@@ -232,16 +269,20 @@ body {
                             padding-bottom: 4vw;
                             padding-left: 3.2vw;
                             padding-right: 6.4vw;
+
                             h2 {
                                 font-size: 6vw;
                             }
+
                             p {
                                 font-size: 5vw;
                             }
                         }
+
                         i {
                             font-size: 7vw;
                             margin-right: 6.4vw;
+
                             &.fa-heart {
                                 @extend .hearth-click;
                             }
