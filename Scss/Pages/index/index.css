@@ -47,6 +47,21 @@ header img {
   width: 44vw;
 }
 
+<<<<<<< HEAD
+=======
+@media screen and (min-width: 768px) {
+  body header {
+    height: 2.60416666667vw;
+  }
+  body header a {
+    font-size: 3vw;
+  }
+  body header img {
+    width: 13vw;
+  }
+}
+
+>>>>>>> dev
 .btn-degrade, body main .description a {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(#ff79da, #9356dc);
@@ -66,12 +81,48 @@ header img {
   font-size: 4vw;
 }
 
+<<<<<<< HEAD
 .hearth-click:hover, body main .restaurants .list .card .detail i.fa-heart:hover {
   font-weight: bold;
   background: -webkit-linear-gradient(250deg, #9356dc, #ff79da);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+=======
+.btn-degrade:hover, body main .description a:hover {
+  opacity: 0.9;
+  -webkit-box-shadow: 0px 1.33333333333vw 2.66666666667vw 1.5vw #dcdcdc;
+          box-shadow: 0px 1.33333333333vw 2.66666666667vw 1.5vw #dcdcdc;
+}
+
+.hearth-click:hover, body main .restaurants .list .card .detail i.fa-heart:hover {
+  cursor: pointer;
+  color: transparent;
+  font-weight: bold;
+  background: linear-gradient(250deg, #9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-animation: animated_gradient 1s;
+          animation: animated_gradient 1s;
+}
+
+@-webkit-keyframes animated_gradient {
+  0% {
+    opacity: 20%;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animated_gradient {
+  0% {
+    opacity: 20%;
+  }
+  100% {
+    opacity: 1;
+  }
+>>>>>>> dev
 }
 
 footer {
@@ -87,9 +138,12 @@ footer svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+=======
+>>>>>>> dev
   height: 5.33333333333vw;
 }
 
@@ -266,22 +320,39 @@ body main .description {
           align-items: center;
   text-align: center;
   background: #f4f4f4;
+<<<<<<< HEAD
   height: 76.533333333333333vw;
+=======
+  height: calc(76.533333333333333vw - 15.2vw);
+  padding-bottom: 15.2vw;
+>>>>>>> dev
 }
 
 body main .description h1 {
   margin-top: 10.666666666666667vw;
   padding-left: 16vw;
   padding-right: 19.733333333333333vw;
+<<<<<<< HEAD
   font-size: 7vw;
+=======
+  font-size: 6.67vw;
+>>>>>>> dev
 }
 
 body main .description p {
   margin-top: 5.333333333333333vw;
+<<<<<<< HEAD
   margin-bottom: 9.066666666666667vw;
   margin-left: 8vw;
   margin-right: 8vw;
   font-size: 5vw;
+=======
+  margin-bottom: 6.6vw;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  font-size: 4vw;
+  font-weight: 100;
+>>>>>>> dev
 }
 
 body main .description a {
@@ -331,11 +402,19 @@ body main .functioning .steps .card {
   margin-bottom: 6.4vw;
 }
 
+<<<<<<< HEAD
 body main .functioning .steps .card.active {
   background: #f1e7fe;
 }
 
 body main .functioning .steps .card.active i {
+=======
+body main .functioning .steps .card:hover {
+  background: #f1e7fe;
+}
+
+body main .functioning .steps .card:hover i {
+>>>>>>> dev
   color: #9356dc;
 }
 
@@ -431,6 +510,7 @@ body main .restaurants .list .card.new::before {
   font-size: 4.26666666667vw;
 }
 
+<<<<<<< HEAD
 body main .restaurants .list .card .picture {
   height: 46.4%;
 }
@@ -440,6 +520,13 @@ body main .restaurants .list .card .picture picture {
 }
 
 body main .restaurants .list .card .picture picture img {
+=======
+body main .restaurants .list .card .click_picture {
+  height: 69.3227091633%;
+}
+
+body main .restaurants .list .card .click_picture picture img {
+>>>>>>> dev
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
@@ -457,11 +544,15 @@ body main .restaurants .list .card .detail {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+<<<<<<< HEAD
   height: 12.5333333333vw;
   padding-top: 4vw;
   padding-bottom: 4vw;
   padding-left: 3.2vw;
   padding-right: 6.4vw;
+=======
+  height: calc(12.5333333333vw + 8vw);
+>>>>>>> dev
   border-radius: 0 0 5.333333333333333vw 5.333333333333333vw;
 }
 
@@ -476,7 +567,17 @@ body main .restaurants .list .card .detail .text {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+<<<<<<< HEAD
   height: 100%;
+=======
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding-top: 4vw;
+  padding-bottom: 4vw;
+  padding-left: 3.2vw;
+  padding-right: 6.4vw;
+>>>>>>> dev
 }
 
 body main .restaurants .list .card .detail .text h2 {
@@ -489,5 +590,9 @@ body main .restaurants .list .card .detail .text p {
 
 body main .restaurants .list .card .detail i {
   font-size: 7vw;
+<<<<<<< HEAD
+=======
+  margin-right: 6.4vw;
+>>>>>>> dev
 }
 /*# sourceMappingURL=index.css.map */

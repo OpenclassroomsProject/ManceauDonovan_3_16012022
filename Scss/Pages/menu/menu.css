@@ -19,17 +19,185 @@ body a {
   color: unset;
 }
 
+<<<<<<< HEAD
 .shadow_box, main .menu .card, .btn-degrade, main .menu a {
+=======
+.shadow_box, .btn-degrade, main .menu a, main .menu .card {
+>>>>>>> dev
   -webkit-box-shadow: 0px 1.33333333333vw 2.66666666667vw 0.533333333333vw #dcdcdc;
           box-shadow: 0px 1.33333333333vw 2.66666666667vw 0.533333333333vw #dcdcdc;
 }
 
+<<<<<<< HEAD
 .hearth-click:hover, main .menu h1 .fa-heart:hover {
   font-weight: bold;
   background: -webkit-linear-gradient(250deg, #9356dc, #ff79da);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+=======
+@-webkit-keyframes show {
+  0% {
+    opacity: 0.1;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0.1;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.btn-degrade, main .menu a {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 7vw;
+  width: 58.133333333333333vw;
+  height: 13.333333333333333vw;
+  color: white;
+  font-size: 4vw;
+}
+
+.btn-degrade:hover, main .menu a:hover {
+  opacity: 0.9;
+  -webkit-box-shadow: 0px 1.33333333333vw 2.66666666667vw 1.5vw #dcdcdc;
+          box-shadow: 0px 1.33333333333vw 2.66666666667vw 1.5vw #dcdcdc;
+}
+
+.hearth-click:hover, main .menu h1 .fa-heart:hover {
+  cursor: pointer;
+  color: transparent;
+  font-weight: bold;
+  background: linear-gradient(250deg, #9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-animation: animated_gradient 1s;
+          animation: animated_gradient 1s;
+}
+
+@-webkit-keyframes animated_gradient {
+  0% {
+    opacity: 20%;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animated_gradient {
+  0% {
+    opacity: 20%;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 16.8vw;
+}
+
+header a {
+  position: absolute;
+  left: 5.86666666667vw;
+  font-size: 6vw;
+}
+
+header img {
+  width: 44vw;
+}
+
+@media screen and (min-width: 768px) {
+  body header {
+    height: 2.60416666667vw;
+  }
+  body header a {
+    font-size: 3vw;
+  }
+  body header img {
+    width: 13vw;
+  }
+}
+
+footer {
+  padding-top: 5.86666666667vw;
+  padding-left: 5.86666666667vw;
+  padding-bottom: 9.33333333333vw;
+  background: #282828;
+  height: 37.3333333333vw;
+  color: white;
+}
+
+footer svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 5.33333333333vw;
+}
+
+footer svg path {
+  fill: white;
+}
+
+footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 26.6666666667vw;
+  margin-top: 5.33333333333vw;
+  font-size: 4vw;
+}
+
+footer div i {
+  margin-right: 2.66666666667vw;
+}
+
+footer div i.fa-hands-helping {
+  font-size: 2.8vw;
+>>>>>>> dev
 }
 
 main .restaurant_picture {
@@ -38,7 +206,10 @@ main .restaurant_picture {
   display: flex;
   height: 69.6vw;
   width: 100vw;
+<<<<<<< HEAD
   background: red;
+=======
+>>>>>>> dev
 }
 
 main .restaurant_picture img {
@@ -60,11 +231,22 @@ main .menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+<<<<<<< HEAD
   margin-top: -50px;
   background: #f4f4f4;
   height: 1161px;
   border-radius: 40px 40px 0 0;
   padding: 35px 14px;
+=======
+  margin-top: -13.3333333333vw;
+  background: #f4f4f4;
+  border-radius: 10vw 10vw 0 0;
+  padding: 9.33333333333vw 3.73333333333vw;
+}
+
+main .menu .food {
+  width: 100%;
+>>>>>>> dev
 }
 
 main .menu .entries,
@@ -104,6 +286,7 @@ main .menu .dessert .card:nth-child(4) {
           animation-fill-mode: forwards;
 }
 
+<<<<<<< HEAD
 @-webkit-keyframes show {
   0% {
     opacity: 0.1;
@@ -132,6 +315,17 @@ main .menu .dessert .card:nth-child(4) {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
+=======
+main .menu .entries .card:nth-child(5),
+main .menu .main_course .card:nth-child(5),
+main .menu .dessert .card:nth-child(5) {
+  -webkit-animation: show 1s;
+          animation: show 1s;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+>>>>>>> dev
 }
 
 main .menu h1 {
@@ -148,6 +342,7 @@ main .menu h1 {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+<<<<<<< HEAD
   margin-bottom: 10px;
   font-family: "Shrikhand", cursive;
   font-size: 7vw;
@@ -160,14 +355,39 @@ main .menu h2 {
   padding-bottom: 9px;
   margin-bottom: 14px;
   margin-top: 30px;
+=======
+  margin-bottom: 2.66666666667vw;
+  font-family: "Shrikhand", cursive;
+  font-size: 8vw;
+}
+
+main .menu h1 .fa-heart {
+  margin-right: 4vw;
+}
+
+main .menu h2 {
+  width: 10.6666666667vw;
+  font-size: 4.53333333333vw;
+  border-bottom: solid 3px #99e2d0;
+  padding-bottom: 2.4vw;
+  margin-bottom: 3.73333333333vw;
+  margin-top: 8vw;
+>>>>>>> dev
   font-weight: 300;
 }
 
 main .menu .card {
+<<<<<<< HEAD
   opacity: 0;
   background: white;
   height: 68px;
   width: 100%;
+=======
+  overflow: hidden;
+  opacity: 0;
+  background: white;
+  height: 18.1333333333vw;
+>>>>>>> dev
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,6 +396,7 @@ main .menu .card {
           justify-content: space-between;
   -webkit-transform: translateY(40px);
           transform: translateY(40px);
+<<<<<<< HEAD
   border-radius: 15px;
   margin-bottom: 16px;
 }
@@ -188,6 +409,58 @@ main .menu .card:hover div.check {
 main .menu .card:hover path {
   -webkit-transform: rotate(720deg);
           transform: rotate(720deg);
+=======
+  border-radius: 4vw;
+  margin-bottom: 4vw;
+}
+
+main .menu .card:hover .check {
+  margin-right: 0 !important;
+}
+
+main .menu .card:hover svg {
+  -webkit-animation: spinner-check 1s;
+          animation: spinner-check 1s;
+}
+
+main .menu .card:hover .name h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+main .menu .card:hover .price span {
+  margin-right: 2.93333333333vw;
+}
+
+@-webkit-keyframes spinner-check {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-check {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+>>>>>>> dev
 }
 
 main .menu .card .name {
@@ -200,22 +473,44 @@ main .menu .card .name {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+<<<<<<< HEAD
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 15px;
   margin-bottom: 15px;
   margin-left: 10px;
+=======
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 3.2vw;
+  margin-bottom: 3.2vw;
+  margin-left: 2.66666666667vw;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+>>>>>>> dev
 }
 
 main .menu .card .name h3 {
   font-weight: 500;
+<<<<<<< HEAD
+=======
+  font-size: 5vw;
+>>>>>>> dev
 }
 
 main .menu .card .name p {
   font-weight: 300;
   white-space: nowrap;
+<<<<<<< HEAD
   overflow: hidden;
+=======
+  font-size: 3.7vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+>>>>>>> dev
 }
 
 main .menu .card .price {
@@ -231,6 +526,14 @@ main .menu .card .price span {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+<<<<<<< HEAD
+=======
+  margin-right: 5.86666666667vw;
+  margin-bottom: 2.6vw;
+  font-size: 3.7vw;
+  -webkit-transition: margin 1s ease-in-out;
+  transition: margin 1s ease-in-out;
+>>>>>>> dev
 }
 
 main .menu .card .price .check {
@@ -244,12 +547,20 @@ main .menu .card .price .check {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+<<<<<<< HEAD
   visibility: hidden;
   height: 100%;
   width: 0;
   right: 0;
   -webkit-transition: width 1s ease-in-out;
   transition: width 1s ease-in-out;
+=======
+  height: 100%;
+  width: 17.3333333333vw;
+  margin-right: -17.3333333333vw;
+  -webkit-transition: margin 1s ease-in-out;
+  transition: margin 1s ease-in-out;
+>>>>>>> dev
 }
 
 main .menu .card .price .check svg {
@@ -258,6 +569,7 @@ main .menu .card .price .check svg {
   fill: white;
 }
 
+<<<<<<< HEAD
 main .menu .card .price .check svg path {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
@@ -267,12 +579,15 @@ main .menu .card .price .check svg path {
   transition: transform 2s ease-in-out, -webkit-transform 2s ease-in-out;
 }
 
+=======
+>>>>>>> dev
 main .menu a {
   margin-top: 46px;
   font-size: 4vw;
   font-weight: 500;
 }
 
+<<<<<<< HEAD
 .btn-degrade, main .menu a {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(#ff79da, #9356dc);
@@ -360,5 +675,257 @@ footer div i {
 
 footer div i.fa-hands-helping {
   font-size: 2.8vw;
+=======
+@media screen and (min-width: 860px) {
+  body {
+    height: 100%;
+    overflow: hidden;
+  }
+  body main {
+    height: calc(100vh - 2.60416666667vw);
+  }
+  body main .restaurant_picture {
+    width: auto;
+    height: calc(100vh - 2.60416666667vw);
+  }
+  body main .menu {
+    padding: 0;
+    margin: 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: absolute;
+    bottom: 2.60416666667vw;
+    width: 100%;
+    margin-bottom: -47vw;
+    -webkit-transition: margin 2s;
+    transition: margin 2s;
+    -webkit-animation: show_menu 3s;
+            animation: show_menu 3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes show_menu {
+    100% {
+      margin-bottom: 0;
+    }
+  }
+  @keyframes show_menu {
+    100% {
+      margin-bottom: 0;
+    }
+  }
+  body main .menu a {
+    margin: 0;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    width: 20vw;
+    height: 5vw;
+    font-size: 2vw;
+  }
+  body main .menu h1 {
+    margin: 0;
+    font-size: 4vw;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: 7.16145833333vw;
+  }
+  body main .menu .food {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body main .menu .food .entries,
+  body main .menu .food .main_course,
+  body main .menu .food .dessert {
+    width: 33%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .menu .food .entries h2,
+  body main .menu .food .main_course h2,
+  body main .menu .food .dessert h2 {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    font-size: 2vw;
+    text-align: center;
+  }
+  body main .menu .food .card {
+    width: 80%;
+    height: 6vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 1.3vw;
+    margin-bottom: 1vw;
+  }
+  body main .menu .food .card:hover .check {
+    -webkit-animation: spinner_desktop-check 1s;
+            animation: spinner_desktop-check 1s;
+  }
+  @-webkit-keyframes spinner_desktop-check {
+    0% {
+      height: 0;
+      width: 0;
+    }
+    80% {
+      height: 100%;
+    }
+    100% {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  @keyframes spinner_desktop-check {
+    0% {
+      height: 0;
+      width: 0;
+    }
+    80% {
+      height: 100%;
+    }
+    100% {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  body main .menu .food .card .price {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body main .menu .food .card .price span {
+    margin: 0;
+    font-size: 1.3vw;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  body main .menu .food .card .price .check {
+    width: 1%;
+    height: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    border-radius: 1.3vw;
+  }
+  body main .menu .food .card .name {
+    width: auto;
+    margin: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main .menu .food .card .name h3 {
+    font-size: 1.5vw;
+  }
+  body main .menu .food .card .name p {
+    font-size: 1vw;
+  }
+  body main .menu .food .card:nth-child(2) {
+    -webkit-animation: show 1s;
+            animation: show 1s;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  body main .menu .food .card:nth-child(3) {
+    -webkit-animation: show 1s;
+            animation: show 1s;
+    -webkit-animation-delay: 1.3s;
+            animation-delay: 1.3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  body main .menu .food .card:nth-child(4) {
+    -webkit-animation: show 1s;
+            animation: show 1s;
+    -webkit-animation-delay: 1.6s;
+            animation-delay: 1.6s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  body main .menu .food .card:nth-child(5) {
+    -webkit-animation: show 1s;
+            animation: show 1s;
+    -webkit-animation-delay: 1.9s;
+            animation-delay: 1.9s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  body footer {
+    position: fixed;
+    bottom: 0;
+    -webkit-transform: translateY(3.47222vw);
+            transform: translateY(3.47222vw);
+    -webkit-animation: show_footer 1s;
+            animation: show_footer 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes show_footer {
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  @keyframes show_footer {
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+}
+
+@media screen and (min-width: 860px) {
+  footer {
+    padding: 0;
+    height: 2.60416666667vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer svg {
+    height: 100%;
+  }
+  footer div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    font-size: 1vw;
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer div i.fa-hands-helping {
+    font-size: 1vw;
+  }
+>>>>>>> dev
 }
 /*# sourceMappingURL=menu.css.map */

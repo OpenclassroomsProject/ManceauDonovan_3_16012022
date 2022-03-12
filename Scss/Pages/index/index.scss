@@ -4,6 +4,10 @@
 @import "../../Components/btn-degrade";
 @import "../../Components/hearth-click";
 @import "../../Layout/footer";
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
 body {
     .background_loader {
         background: rgba(0, 0, 0, 0.4);
@@ -16,14 +20,26 @@ body {
         justify-content: center;
         visibility: hidden;
         animation: show_and_unshow_element 3s linear;
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
         @keyframes show_and_unshow_element {
             0% {
                 visibility: visible;
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
             100% {
                 visibility: hidden;
             }
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
         .spin_loader {
             // background: $pink;
             width: 20px;
@@ -33,14 +49,26 @@ body {
             align-items: center;
             justify-content: center;
             animation: spinner 3s linear;
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
             @keyframes spinner {
                 0% {
                     transform: rotate(0);
                 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
                 100% {
                     transform: rotate(6turn);
                 }
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
             div {
                 @mixin ball_appearance($percentage: 1) {
                     background-color: rgba($purple, $percentage);
@@ -50,15 +78,27 @@ body {
                     position: absolute;
                     content: "";
                 }
+<<<<<<< HEAD
                 @include ball_appearance(0.7);
                 position: relative;
                 top: -75%;
+=======
+
+                @include ball_appearance(0.7);
+                position: relative;
+                top: -75%;
+
+>>>>>>> dev
                 &::after {
                     top: 30%;
                     left: 90%;
                     // background: #9356dc;
                     @include ball_appearance;
                 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
                 &::before {
                     right: 90%;
                     top: 30%;
@@ -68,6 +108,10 @@ body {
             }
         }
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
     .localisation {
         display: flex;
         justify-content: center;
@@ -77,10 +121,18 @@ body {
         height: 13.333333333333333vw;
         padding-right: 5.333333333333333vw;
         font-size: 5vw;
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
         i {
             margin-right: 4.8vw;
         }
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
     main {
         .description {
             display: flex;
@@ -88,12 +140,18 @@ body {
             align-items: center;
             text-align: center;
             background: $grey;
+<<<<<<< HEAD
             height: 76.533333333333333vw;
+=======
+            height: calc(76.533333333333333vw - 15.2vw);
+            padding-bottom: 15.2vw;
+>>>>>>> dev
 
             h1 {
                 margin-top: 10.666666666666667vw;
                 padding-left: 16vw;
                 padding-right: 19.733333333333333vw;
+<<<<<<< HEAD
                 font-size: 7vw;
             }
             p {
@@ -103,27 +161,62 @@ body {
                 margin-right: 8vw;
                 font-size: 5vw;
             }
+=======
+                font-size: 6.67vw;
+            }
+
+            p {
+                margin-top: 5.333333333333333vw;
+                margin-bottom: 6.6vw;
+                // margin-bottom: 30px;
+                margin-left: 8vw;
+                margin-right: 8vw;
+                font-size: 4vw;
+                font-weight: 100;
+            }
+
+>>>>>>> dev
             a {
                 color: white;
                 @extend .btn-degrade;
             }
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
         .functioning,
         .restaurants {
             padding-left: 5.333333333333333vw;
             padding-right: 5.333333333333333vw;
         }
+<<<<<<< HEAD
         .functioning {
             padding-top: 13.866666666666667vw;
             height: 103.466666666666667vw;
+=======
+
+        .functioning {
+            padding-top: 13.866666666666667vw;
+            height: 103.466666666666667vw;
+
+>>>>>>> dev
             h1 {
                 margin-bottom: 5.866666666666667vw;
                 font-size: 6.5vw;
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
             .steps {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
                 .card {
                     display: flex;
                     align-items: center;
@@ -133,12 +226,23 @@ body {
                     border-radius: 5.333333333333333vw;
                     margin-bottom: 6.4vw;
                     @extend .shadow_box;
+<<<<<<< HEAD
                     &.active {
                         background: rgb(241, 231, 254);
+=======
+
+                    &:hover {
+                        background: rgb(241, 231, 254);
+
+>>>>>>> dev
                         i {
                             color: $purple;
                         }
                     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
                     .step_number {
                         position: relative;
                         right: 2.666666666666667vw;
@@ -151,38 +255,70 @@ body {
                         width: 6.4vw;
                         color: white;
                     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
                     i {
                         color: rgb(107, 107, 107);
                         margin-left: 2.933333333333333vw;
                         margin-right: 7.466666666666667vw;
                         font-size: 6vw;
                     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
                     p {
                         font-size: 5vw;
                     }
                 }
             }
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
         .restaurants {
             padding-top: 15.466666666666667vw;
             background: $grey;
             height: 311.466666666666667vw;
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
             h1 {
                 margin-bottom: 6.933333333333333vw;
                 font-size: 7vw;
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
             .list {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 height: 282.133333333333333vw;
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
                 .card {
                     &:focus-visible {
                         outline: none;
                     }
+<<<<<<< HEAD
                     display: flex;
                     flex-direction: column;
                     height: 66.933333333333333vw;
+=======
+
+                    display: flex;
+                    flex-direction: column;
+                    height: 66.933333333333333vw;
+
+>>>>>>> dev
                     &.new::before {
                         content: "Nouveau";
                         position: absolute;
@@ -198,10 +334,20 @@ body {
                         color: rgb(14, 118, 83);
                         font-size: 4.26666666667vw;
                     }
+<<<<<<< HEAD
                     .picture {
                         height: 46.4%;
                         picture {
                             height: 69.322709163346614%;
+=======
+
+                    .click_picture {
+                        height: 69.3227091633%;
+
+                        picture {
+
+                            // height: 69.322709163346614%;
+>>>>>>> dev
                             img {
                                 object-fit: cover;
                                 height: 100%;
@@ -210,15 +356,27 @@ body {
                             }
                         }
                     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
                     .detail {
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
+<<<<<<< HEAD
                         height: 12.5333333333vw;
                         padding-top: 4vw;
                         padding-bottom: 4vw;
                         padding-left: 3.2vw;
                         padding-right: 6.4vw;
+=======
+                        height: calc(12.5333333333vw + 8vw);
+                        // padding-top: 4vw;
+                        // padding-bottom: 4vw;
+                        // padding-left: 3.2vw;
+                        // padding-right: 6.4vw;
+>>>>>>> dev
                         border-radius: 0 0 5.333333333333333vw 5.333333333333333vw;
                         @extend .shadow_box;
 
@@ -226,16 +384,37 @@ body {
                             display: flex;
                             flex-direction: column;
                             justify-content: space-between;
+<<<<<<< HEAD
                             height: 100%;
                             h2 {
                                 font-size: 6vw;
                             }
+=======
+                            flex-grow: 1;
+                            padding-top: 4vw;
+                            padding-bottom: 4vw;
+                            padding-left: 3.2vw;
+                            padding-right: 6.4vw;
+
+                            h2 {
+                                font-size: 6vw;
+                            }
+
+>>>>>>> dev
                             p {
                                 font-size: 5vw;
                             }
                         }
+<<<<<<< HEAD
                         i {
                             font-size: 7vw;
+=======
+
+                        i {
+                            font-size: 7vw;
+                            margin-right: 6.4vw;
+
+>>>>>>> dev
                             &.fa-heart {
                                 @extend .hearth-click;
                             }
@@ -245,4 +424,8 @@ body {
             }
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> dev

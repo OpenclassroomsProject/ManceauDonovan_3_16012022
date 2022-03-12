@@ -1,0 +1,26 @@
+footer {
+    padding: 0;
+    height: 2.60416666667vw;
+    // height: 6.51041666667vw;
+
+    display: flex;
+    align-items: center;
+    // // flex-direction: column-reverse;
+    // align-items: flex-end;
+    svg {
+        height: 100%;
+    }
+    div {
+        flex-direction: row;
+        font-size: 1vw;
+        width: 100vw;
+        height: auto;
+        margin: 0;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        align-items: center;
+        i.fa-hands-helping {
+            font-size: 1vw;
+        }
+    }
+}
